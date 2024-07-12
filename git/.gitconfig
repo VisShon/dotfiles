@@ -1,0 +1,11 @@
+[alias]
+	ac = commit -am
+	com = commit -am
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = VisShon
+	email = vshon447@gmail.com
