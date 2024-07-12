@@ -1,0 +1,111 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nasm x86 assembly",
+	
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include":"#strings"
+		},
+		{
+			"include":"#numbers"
+		},
+		{
+			"include":"#keywords"
+		},
+		{}
+	],
+	"repository": {
+		"comments":{
+			"patterns": [{
+				"name":"comment",
+				"match":"(;)(.*)"
+		}]},
+		"strings": {
+			"name": "meta.preprocessor.string",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nasm",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators":{
+			"patterns": [
+				{
+				"name":"meta.preprocessor.numeric",
+				"match": "(pop|add|mul|imul|idiv|div|push|lea|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|mov|xor|cmp|call|extern|global|dec|(?<=\\s)inc(?!(w+))|and|or|xor|not|neg|shl|shr)"
+			},
+			{
+				"name":"support.type",
+				"match": "(^%)(include|define|assign|defstr|deftok|defalias|undefalias)"
+			}
+
+			]},
+		"numbers":{
+			"patterns": [
+				{
+					"name":"constant.numeric",
+					"match": "(\\d+)(?!\\w+)"
+				}
+			]
+		},
+		"keywords":{
+			
+			"patterns": [
+			{
+				"name":"support.type",
+				"match":"(_main)"
+			},
+			{
+				"name":"string.regexp",
+				"match": "(?<=(section|SECTION)\\s)(.\\w+)"
+			},
+			{
+				"name":"support.type.property-name",
+				"match": "(eax|ebx|ecx|edx|esp|ah(?!(\\S))|al(?!(\\S))|bh(?!(\\S))|bl(?!(\\S))|ch(?!(\\S))|cl(?!(\\S))|dh(?!(\\S))|dl(?!(\\S))|cx|0ah|ADSDAS23232(?!(\\S))|(?<=\\s|,)ax)"
+			},
+			{
+				"name":"nasm.variable",
+				"patterns": [
+					{
+						"name":"meta.object-literal.key",
+						"match": "(ret|(db(?!(\\w+)))|(dw(?!(\\w+)))|(dd(?!(\\w+)))|(dq(?!(\\w+)))|(dt(?!(\\w+)))|resb|resw|byte|word|dword|qword|tword|oword|yword|zword)"
+					},
+				
+					{
+						"name":"entity.name.tag",
+						"match":"(?<=\\s)(\\w+)(?=:\\s(\\w+))|(?<=\\[)(\\w+)(?=\\])|(?<=\\spush\\s)(\\w+)|(?=.*(db))(\\w+)"
+					}
+				]
+			},
+			{
+				"name":"nasm.function.general",
+				"patterns": [
+					{
+						"name":"invalid",
+						"match": "(?<=\\b(call|je|jz|jne|jnz|jg|jnle|jge|jnl|jl|jnge|jle|jng|ja|jnbe|jae|jnb|jb|jnae|jbe|jna|jxcz|jc|jnc|jo|jno|jp|jpe|jnp|jpo|js|jns|jmp|extern))(\\s\\w+)"
+					},
+					{
+						"name":"invalid",
+						"match":"(^(\\w))(\\w+:)(?=\\n)(?<!_main)"
+					}
+				]
+				
+			},
+			{
+				"name":"constant.language",
+				"match": "SECTION|section"
+			}
+			]
+		}
+	},
+	"scopeName": "source.asm"
+}

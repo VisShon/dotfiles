@@ -1,0 +1,42 @@
+{
+  "sequelizeModel": {
+    "prefix": "mdl",
+    "body": [
+      "'use strict';",
+      "const { Model } = require('sequelize');",
+      "module.exports = (sequelize, DataTypes) => {",
+      "  class $TM_FILENAME_BASE extends Model {",
+      "    static associate(models) {}",
+      "  }",
+      "  $TM_FILENAME_BASE.init(",
+      "    {",
+      "      $1",
+      "    },",
+      "    {",
+      "      sequelize,",
+      "      modelName: '$TM_FILENAME_BASE',",
+      "    }",
+      "  );",
+      "  return $TM_FILENAME_BASE;",
+      "};",
+      ""
+    ],
+    "description": "Defines a Sequelize model"
+  },
+  "sequelizeAssociation": {
+    "prefix": "assoc",
+    "body": [
+      "$TM_FILENAME_BASE.${1|hasOne,hasMany,belongsTo,belongsToMany|}($2, {",
+      "  $3",
+      "});"
+    ],
+    "description": "Defines a Sequelize association"
+  },
+  "sequelizeDataTypes": {
+    "prefix": "dt",
+    "body": [
+      "DataTypes.${1|STRING,CHAR,TEXT,NUMBER,TINYINT,SMALLINT,MEDIUMINT,INTEGER,BIGINT,FLOAT,REAL,DOUBLE,DECIMAL,BOOLEAN,TIME,DATE,DATEONLY,HSTORE,JSON,JSONB,NOW,BLOB,RANGE,UUID,UUIDV1,UUIDV4,VIRTUAL,ENUM,ARRAY,GEOMETRY,GEOGRAPHY,CIDR,INET,MACADDR,CITEXT|}"
+    ],
+    "description": "Sets Sequelize data type"
+  }
+}
