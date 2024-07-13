@@ -2,143 +2,81 @@ tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
+tap "jesseduffield/lazygit"
 tap "mongodb/brew"
 tap "sambadevi/powerlevel9k"
-# Library and utilities for processing GIFs
 brew "giflib"
-# Image format providing lossless and lossy compression for web images
 brew "webp"
-# New file format for still image compression
 brew "jpeg-xl"
-# Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Collection of portable C++ source libraries
 brew "boost"
-# XML-based font configuration API for X Windows
 brew "fontconfig"
-# Core application library for C
 brew "glib"
-# Vector graphics library with cross-device output support
 brew "cairo"
-# Tool to obtain certs from Let's Encrypt and autoenable HTTPS
 brew "certbot"
-# Cross-platform make
 brew "cmake"
-# GNU File, Shell, and Text utilities
 brew "coreutils"
-# Pack, ship and run any application as a lightweight container
 brew "docker"
-# VMware Fusion & Workstation docker-machine driver
 brew "docker-machine-driver-vmware"
-# Collection of reusable C++ library artifacts developed at Facebook
 brew "folly"
-# C++14 implementation of the TLS-1.3 standard
 brew "fizz"
-# Modular, composable client/server abstractions framework
 brew "wangle"
-# Facebook's branch of Apache Thrift, including a new C++ server
 brew "fbthrift"
-# Thrift functions for querying information from a service
 brew "fb303"
-# Shared library for Watchman and Eden projects
 brew "edencommon"
-# Command-line fuzzy finder written in Go
+brew "fd"
 brew "fzf"
-# Library for encoding and decoding .avif files
 brew "libavif"
-# Graphics library to dynamically manipulate images
 brew "gd"
-# Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
-# OpenType text shaping engine
+brew "git-delta"
 brew "harfbuzz"
-# Framework for layout and rendering of i18n text
 brew "pango"
-# Cross-platform application and UI framework
 brew "qt"
-# Command-driven, interactive function plotting
 brew "gnuplot"
-# Manage compile and link flags for libraries
 brew "pkg-config"
-# Generate introspection data for GObject libraries
 brew "gobject-introspection"
-# Image manipulation library
 brew "jpeg", link: true
-# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
 brew "libfido2"
-# X.509 and CMS library
 brew "libksba"
-# Library to render SVG files using Cairo
 brew "librsvg"
-# Generic library support script
 brew "libtool"
-# Multi-platform support library with a focus on asynchronous I/O
 brew "libuv"
-# Simple tool to make locally trusted development certificates
 brew "mkcert"
-# Platform built on V8 to build network applications
 brew "node", link: false
-# MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
-# UNIX movie player
 brew "mplayer"
-# Open source relational database management system
 brew "mysql"
-# Fast, highly customisable system info script
 brew "neofetch"
-# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
-# Platform built on V8 to build network applications
 brew "node@14"
-# Platform built on V8 to build network applications
 brew "node@16"
-# Manage multiple Node.js versions
 brew "nvm"
-# Object-relational database system
 brew "postgresql@14", link: false
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.11", link: false
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.9", link: false
-# Cross-platform application and UI framework
 brew "qt@5"
-# Ruby version manager
 brew "rbenv"
-# Persistent key-value database, with built-in net interface
 brew "redis"
-# Rename multiple files in a directory
 brew "ren"
-# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Display directories as trees (with optional color/HTML output)
+brew "thefuck"
 brew "tree"
-# Tool for creating isolated virtual python environments
 brew "virtualenv"
-# Watch files and take action when they change
 brew "watchman"
-# Internet file retriever
 brew "wget"
-# UNIX shell (command interpreter)
+brew "zoxide"
 brew "zsh"
-# Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
-# High-performance, schema-free, document-oriented database
+brew "jesseduffield/lazygit/lazygit"
 brew "mongodb/brew/mongodb-community"
-# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# File system integration
 cask "macfuse"
-# Minimal installer for conda specific to conda-forge
 cask "miniforge"
-# OpenJDK distribution from Azul
 cask "zulu@11"
 vscode "abusaidm.html-snippets"
 vscode "andrewdircks.google-cloud-platform-ssh"
