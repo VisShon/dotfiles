@@ -110,7 +110,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-neofetch
+# neofetch
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
@@ -132,7 +132,7 @@ eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 eval "$(thefuck --alias)"
 eval "$(thefuck --alias fk)"
-
+alias cd="z"
 
 # --- setup fzf theme ---
 fg="#CBE0F0"
@@ -183,3 +183,14 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+
+
+
+
+
+
+
+
+
+ # neofetch
