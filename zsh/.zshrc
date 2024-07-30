@@ -185,12 +185,4 @@ _fzf_comprun() {
 }
 
 
-
-
-
-
-
-
-
-
- # neofetch
+ neofetch
