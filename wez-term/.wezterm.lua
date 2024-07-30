@@ -9,9 +9,9 @@ config.colors = {
 	cursor_border = "#47FF9C",
 	cursor_fg = "#011423",
 	selection_bg = "#44FFB1",
-	selection_fg = "#CBE0F0",
-	ansi = { "#041409", "#E52E2E", "#44FFB1", "#FFE073", "#0f85ed", "#a277ff", "#24EAF7", "#44FFB1" },
-	brights = { "#214969", "#E52E2E", "#44FFB1", "#FFE073", "#A277FF", "#a277ff", "#24EAF7", "#24EAF7" },
+	selection_fg = "#04140d",
+	ansi = { "#041409", "#c71616", "#27d679", "#FFE073", "#0f85ed", "#7743e8", "#24EAF7", "#44FFB1" },
+	brights = { "#214969", "#E52E2E", "#44FFB1", "#FFE073", "#A277FF", "#3e7eed", "#24EAF7", "#24EAF7" },
 }
 
 config.font = wezterm.font("Inconsolata Nerd Font")
