@@ -10,9 +10,9 @@ config.colors = {
 	foreground = "#CBE0F0",
 
 	-- Background color of the terminal
-	background = "#181524",
+	background = "#24252E",
 
-	-- Cursor color when focused on the terminal
+	-- Cursor color when focusaed on the terminal
 	cursor_bg = "#47FF9C",
 
 	-- Cursor border color (used around the cursor)
@@ -67,10 +67,10 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
 -- Set the window background opacity (transparency level)
-config.window_background_opacity = 0.85
+config.window_background_opacity = 1
 
 -- Apply a blur effect to the window background on macOS
-config.macos_window_background_blur = 30
+-- config.macos_window_background_blur = 50
 
 -- Return the final configuration to WezTerm
 return config
