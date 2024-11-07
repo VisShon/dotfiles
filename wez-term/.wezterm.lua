@@ -22,7 +22,7 @@ config.colors = {
 	cursor_fg = "#011423",
 
 	-- Background color of selected text
-	selection_bg = "#44FFB1",
+	selection_bg = "#47FF9C",
 
 	-- Foreground color of selected text
 	selection_fg = "#04140d",
@@ -31,19 +31,19 @@ config.colors = {
 	ansi = {
 		"#041409", -- Black
 		"#c71616", -- Red
-		"#27d679", -- Green
+		"#47FF9C", -- Green
 		"#FFE073", -- Yellow
 		"#0f85ed", -- Blue
 		"#7743e8", -- Magenta
 		"#24EAF7", -- Cyan
-		"#44FFB1", -- Light Green
+		"#47FF9C", -- Light Green
 	},
 
 	-- Bright color palette (brighter versions of the ANSI colors)
 	brights = {
 		"#214969", -- Bright Black (dark gray)
 		"#E52E2E", -- Bright Red
-		"#44FFB1", -- Bright Green
+		"#47FF9C", -- Bright Green
 		"#FFE073", -- Bright Yellow
 		"#A277FF", -- Bright Blue
 		"#3e7eed", -- Bright Magenta
@@ -57,7 +57,7 @@ config.colors = {
 config.font = wezterm.font("Inconsolata Nerd Font")
 
 -- Set the font size to 18 points
-config.font_size = 18
+config.font_size = 16
 
 -- --- UI Configuration ---
 -- Disable the tab bar (useful if you only use single panes or external tab management)
@@ -67,10 +67,10 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
 -- Set the window background opacity (transparency level)
-config.window_background_opacity = 1
+-- config.window_background_opacity = 0.9
 
 -- Apply a blur effect to the window background on macOS
--- config.macos_window_background_blur = 50
+config.macos_window_background_blur = 4--[[ 0 ]]
 
 -- Return the final configuration to WezTerm
 return config
