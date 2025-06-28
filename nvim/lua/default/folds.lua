@@ -16,3 +16,6 @@ end
 
 vim.keymap.set("n", "<leader>zs", close_all_folds, { desc = "[s]hut all folds" })
 vim.keymap.set("n", "<leader>zo", open_all_folds, { desc = "[o]pen all folds" })
+vim.keymap.set("n", "<leader>ar", function()
+  vim.api.nvim_feedkeys("ysa", "n", false)
+end, { desc = "Start surround add (ysa)" })
